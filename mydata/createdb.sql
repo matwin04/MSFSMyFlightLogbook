@@ -1,0 +1,11 @@
+CREATE TABLE IF NOT EXISTS airports (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    icao TEXT NOT NULL,
+    name TEXT NOT NULL,
+    city TEXT NOT NULL,
+    subd TEXT NOT NULL,
+    country TEXT NOT NULL,
+    elv INTEGER NOT NULL,
+    lat REAL NOT NULL,
+    lon REAL NOT NULL
+);
