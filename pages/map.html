@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_9f1d69113c12eb068aa3099aeed8ddf8 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_9f1d69113c12eb068aa3099aeed8ddf8" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_9f1d69113c12eb068aa3099aeed8ddf8 = L.map(
+                "map_9f1d69113c12eb068aa3099aeed8ddf8",
+                {
+                    center: [20.0, 0.0],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 2,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_fdb94044c80e63b5fe9a459403254fc8 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors", "detectRetina": false, "maxNativeZoom": 19, "maxZoom": 19, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+        
+    
+            tile_layer_fdb94044c80e63b5fe9a459403254fc8.addTo(map_9f1d69113c12eb068aa3099aeed8ddf8);
+        
+    
+            var marker_896ba533da084d2ac68406cac9f0989b = L.marker(
+                [33.81793, -118.15189],
+                {}
+            ).addTo(map_9f1d69113c12eb068aa3099aeed8ddf8);
+        
+    
+        var popup_7fe80973931ae1ef1f85e383d8c8a947 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ff0e8792b24dedadbcd13b60be2188c3 = $(`<div id="html_ff0e8792b24dedadbcd13b60be2188c3" style="width: 100.0%; height: 100.0%;">Long Beach (Daugherty Field) Airport (KLGB) Long Beach, California US 60.4 FEET MSL</div>`)[0];
+                popup_7fe80973931ae1ef1f85e383d8c8a947.setContent(html_ff0e8792b24dedadbcd13b60be2188c3);
+            
+        
+
+        marker_896ba533da084d2ac68406cac9f0989b.bindPopup(popup_7fe80973931ae1ef1f85e383d8c8a947)
+        ;
+
+        
+    
+    
+            marker_896ba533da084d2ac68406cac9f0989b.bindTooltip(
+                `<div>
+                     Long Beach (Daugherty Field) Airport
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_6a1db946ce7a78b50fdb7c3d12db32b2 = L.marker(
+                [37.62406, -118.83875],
+                {}
+            ).addTo(map_9f1d69113c12eb068aa3099aeed8ddf8);
+        
+    
+        var popup_4f8a467a342f6450db43a1ac32e5c7cc = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e2833f9f6638f278978c7452e3ebe2a9 = $(`<div id="html_e2833f9f6638f278978c7452e3ebe2a9" style="width: 100.0%; height: 100.0%;">Mammoth Yosemite Airport (KMMH) Mammoth Lakes, California US 7134.8 FEET MSL</div>`)[0];
+                popup_4f8a467a342f6450db43a1ac32e5c7cc.setContent(html_e2833f9f6638f278978c7452e3ebe2a9);
+            
+        
+
+        marker_6a1db946ce7a78b50fdb7c3d12db32b2.bindPopup(popup_4f8a467a342f6450db43a1ac32e5c7cc)
+        ;
+
+        
+    
+    
+            marker_6a1db946ce7a78b50fdb7c3d12db32b2.bindTooltip(
+                `<div>
+                     Mammoth Yosemite Airport
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_d120c630d8e99e069662559554f9c3a7 = L.marker(
+                [37.61881, -122.37542],
+                {}
+            ).addTo(map_9f1d69113c12eb068aa3099aeed8ddf8);
+        
+    
+        var popup_e0e555df5d08345b4b3e699667c3db5c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_db0aad0ca7b44b3313ec15d8cbc97a0c = $(`<div id="html_db0aad0ca7b44b3313ec15d8cbc97a0c" style="width: 100.0%; height: 100.0%;">San Francisco International Airport (KSFO) San Francisco, California US 13.1 FEET MSL</div>`)[0];
+                popup_e0e555df5d08345b4b3e699667c3db5c.setContent(html_db0aad0ca7b44b3313ec15d8cbc97a0c);
+            
+        
+
+        marker_d120c630d8e99e069662559554f9c3a7.bindPopup(popup_e0e555df5d08345b4b3e699667c3db5c)
+        ;
+
+        
+    
+    
+            marker_d120c630d8e99e069662559554f9c3a7.bindTooltip(
+                `<div>
+                     San Francisco International Airport
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_6f11914ab08b4e9668182c90f6ff1e4e = L.marker(
+                [39.0005, -119.75111],
+                {}
+            ).addTo(map_9f1d69113c12eb068aa3099aeed8ddf8);
+        
+    
+        var popup_2d7dec85564581c7be2b14e0d475cabd = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_96b47c638e4eb538d9946bc0c2841b4f = $(`<div id="html_96b47c638e4eb538d9946bc0c2841b4f" style="width: 100.0%; height: 100.0%;">Minden-Tahoe Airport (KMEV) Minden, Nevada US 4723.6 FEET MSL</div>`)[0];
+                popup_2d7dec85564581c7be2b14e0d475cabd.setContent(html_96b47c638e4eb538d9946bc0c2841b4f);
+            
+        
+
+        marker_6f11914ab08b4e9668182c90f6ff1e4e.bindPopup(popup_2d7dec85564581c7be2b14e0d475cabd)
+        ;
+
+        
+    
+    
+            marker_6f11914ab08b4e9668182c90f6ff1e4e.bindTooltip(
+                `<div>
+                     Minden-Tahoe Airport
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_40652b67e5625a62573107e13f28049e = L.marker(
+                [33.67566, -117.86823],
+                {}
+            ).addTo(map_9f1d69113c12eb068aa3099aeed8ddf8);
+        
+    
+        var popup_23fdd4c99b67881e2fcf6dadc4d748ae = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_4d8d32c528b61dd6945284dfeaa02828 = $(`<div id="html_4d8d32c528b61dd6945284dfeaa02828" style="width: 100.0%; height: 100.0%;">John Wayne/Orange County Airport (KSNA) Santa Ana, California US 55.9 FEET MSL</div>`)[0];
+                popup_23fdd4c99b67881e2fcf6dadc4d748ae.setContent(html_4d8d32c528b61dd6945284dfeaa02828);
+            
+        
+
+        marker_40652b67e5625a62573107e13f28049e.bindPopup(popup_23fdd4c99b67881e2fcf6dadc4d748ae)
+        ;
+
+        
+    
+    
+            marker_40652b67e5625a62573107e13f28049e.bindTooltip(
+                `<div>
+                     John Wayne/Orange County Airport
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_aa2cf96e6133ee9d127428a9e094ed10 = L.marker(
+                [33.67566, -117.86823],
+                {}
+            ).addTo(map_9f1d69113c12eb068aa3099aeed8ddf8);
+        
+    
+        var popup_2639adc6bb84bf947534714dca35d197 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e8546ddeb807305fe4e1541584d6047f = $(`<div id="html_e8546ddeb807305fe4e1541584d6047f" style="width: 100.0%; height: 100.0%;">John Wayne/Orange County Airport (KSNA) Santa Ana, California US 55.9 FEET MSL</div>`)[0];
+                popup_2639adc6bb84bf947534714dca35d197.setContent(html_e8546ddeb807305fe4e1541584d6047f);
+            
+        
+
+        marker_aa2cf96e6133ee9d127428a9e094ed10.bindPopup(popup_2639adc6bb84bf947534714dca35d197)
+        ;
+
+        
+    
+    
+            marker_aa2cf96e6133ee9d127428a9e094ed10.bindTooltip(
+                `<div>
+                     John Wayne/Orange County Airport
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_247c9c7c22db93414e6393c35401b502 = L.marker(
+                [34.05601, -117.60119],
+                {}
+            ).addTo(map_9f1d69113c12eb068aa3099aeed8ddf8);
+        
+    
+        var popup_599f95b46839ac8902664153a9015aaa = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_7f0c10b0a4711743910687385aa7b0a8 = $(`<div id="html_7f0c10b0a4711743910687385aa7b0a8" style="width: 100.0%; height: 100.0%;">Ontario International Airport (KONT) Ontario, California US 944.1 FEET MSL</div>`)[0];
+                popup_599f95b46839ac8902664153a9015aaa.setContent(html_7f0c10b0a4711743910687385aa7b0a8);
+            
+        
+
+        marker_247c9c7c22db93414e6393c35401b502.bindPopup(popup_599f95b46839ac8902664153a9015aaa)
+        ;
+
+        
+    
+    
+            marker_247c9c7c22db93414e6393c35401b502.bindTooltip(
+                `<div>
+                     Ontario International Airport
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_33dec3ad293a875120dd600f00116769 = L.marker(
+                [37.37311, -118.36361],
+                {}
+            ).addTo(map_9f1d69113c12eb068aa3099aeed8ddf8);
+        
+    
+        var popup_1b064e02bee608f570c021ca8487a3fd = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_921d44bfb88818342bd46e78c9ef897f = $(`<div id="html_921d44bfb88818342bd46e78c9ef897f" style="width: 100.0%; height: 100.0%;">Bishop Airport (KBIH) Bishop, California US 4124.3 FEET MSL</div>`)[0];
+                popup_1b064e02bee608f570c021ca8487a3fd.setContent(html_921d44bfb88818342bd46e78c9ef897f);
+            
+        
+
+        marker_33dec3ad293a875120dd600f00116769.bindPopup(popup_1b064e02bee608f570c021ca8487a3fd)
+        ;
+
+        
+    
+    
+            marker_33dec3ad293a875120dd600f00116769.bindTooltip(
+                `<div>
+                     Bishop Airport
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_278f113038c792aa913e87c931f14b1d = L.marker(
+                [33.9425, -118.40805],
+                {}
+            ).addTo(map_9f1d69113c12eb068aa3099aeed8ddf8);
+        
+    
+        var popup_60ecbc7cc94109a44ed425c25b1e0fd8 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d1d8618d86ac7ca4ed251b1d2e556606 = $(`<div id="html_d1d8618d86ac7ca4ed251b1d2e556606" style="width: 100.0%; height: 100.0%;">Los Angeles International Airport (KLAX) Los Angeles, California US 127.8 FEET MSL</div>`)[0];
+                popup_60ecbc7cc94109a44ed425c25b1e0fd8.setContent(html_d1d8618d86ac7ca4ed251b1d2e556606);
+            
+        
+
+        marker_278f113038c792aa913e87c931f14b1d.bindPopup(popup_60ecbc7cc94109a44ed425c25b1e0fd8)
+        ;
+
+        
+    
+    
+            marker_278f113038c792aa913e87c931f14b1d.bindTooltip(
+                `<div>
+                     Los Angeles International Airport
+                 </div>`,
+                {"sticky": true}
+            );
+        
+</script>
+</html>
