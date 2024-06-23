@@ -2,7 +2,6 @@ import os.path
 import sqlite3
 from bottle import request, route, run, template, redirect, static_file
 import airportsdata
-import pandas as pd
 from createMap import *
 
 
@@ -55,6 +54,21 @@ def add_airports():
         conn.commit()
         cursor.close()
         createMap()
+    redirect('/')
+@route("/addflight")
+def add_flight_form():
+    return static_file("/flights/new.html",root='./pages')
+
+@route("/addflight",method="POST")
+def add_flight():
+    depart_icao = request.forms.get('depart_icao')
+    arrive_icao = request.forms.get('arrive_icao')
+    conn = connectDB()
+    cursor = conn.cursor()
+    cursor.execute("INSERT INTO flights (depart_icao, arrive_icao) VALUES (?,?)",
+                   (depart_icao,arrive_icao))
+    conn.commit()
+    cursor.close()
     redirect('/')
 if __name__ == '__main__':
     initDB()

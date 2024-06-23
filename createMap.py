@@ -1,21 +1,45 @@
+import sqlite3
 from main import connectDB
 import folium
 import folium.plugins
 
 
 def createMap():
+    conn = connectDB()
+    cursor = conn.cursor()
+    #airports
+    cursor.execute("SELECT * FROM airports")
+    airports = cursor.fetchall()
+    #Flights
+    cursor.execute("SELECT * FROM flights")
+    flights = cursor.fetchall()
+
+
+
     m = folium.Map(location=[20,0],zoom_start=2)
-    icon_plane = folium.plugins.BeautifyIcon(
-        icon="plane", border_color="#b3334f", text_color="#b3334f", icon_shape="triangle"
-    )
-    with connectDB() as conn:
-        cursor = conn.cursor()
-        cursor.execute("SELECT * FROM airports")
-        rows = cursor.fetchall()
-        for row in rows:
-            folium.Marker(
-                location=[row['lat'],row['lon']],
-                popup=f"{row['name']} ({row['icao']})\n{row['city']}, {row['subd']}\n{row['country']}\n{row['elv']} FEET MSL",
-                tooltip=row['name']
+    for airport in airports:
+        folium.Marker(
+            location=[airport['lat'],airport['lon']],
+            popup=f"{airport['name']} ({airport['icao']})\n{airport['city']}, {airport['subd']}\n{airport['country']}\n{airport['elv']} FEET MSL",
+            tooltip=airport['name']
+        ).add_to(m)
+    for flight in flights:
+        depart_icao = flight['depart_icao']
+        arrive_icao = flight['arrive_icao']
+        cursor.execute("SELECT lat, lon FROM airports WHERE icao=?", (depart_icao,))
+        depart_airport = cursor.fetchone()
+
+        cursor.execute("SELECT lat, lon FROM airports WHERE icao=?", (arrive_icao,))
+        arrive_airport = cursor.fetchone()
+
+        if depart_airport and arrive_airport:
+            folium.PolyLine(
+                locations=[
+                    [depart_airport['lat'],depart_airport['lon']],
+                    [arrive_airport['lat'],arrive_airport['lon']]
+                ],
+                color = "red",
+                weight = 2.5,
+                opacity = 1
             ).add_to(m)
     m.save("pages/map.html")
